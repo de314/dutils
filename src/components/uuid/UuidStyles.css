@@ -1,0 +1,4 @@
+.UuidPage .IdTile.touched > div {
+  background-color: #333;
+  color: #fff;
+}
