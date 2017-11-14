@@ -34,7 +34,7 @@ const DateInput = ({ dateInput, setDateInput, inputFormat, setInputFormat, valid
         {dateFormats.map((format, i) => (
           <div className="FormatTile p1 col col-4" key={i}>
             <div
-              className={classnames('border rounded p1 pointable center ', {
+              className={classnames('border rounded p1 clickable center ', {
                 shadow: format.value === inputFormat,
                 'bg-aqua': format.value === inputFormat && valid,
                 'bg-red': format.value === inputFormat && !valid,
