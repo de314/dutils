@@ -1,1 +1,0 @@
-{"version":3,"sources":["components/uuid/UuidStyles.css"],"names":[],"mappings":"AAAA,8BACE,sBACA,UAAY","file":"static/css/main.28c4b208.css","sourcesContent":[".UuidPage .IdTile.touched > div {\n  background-color: #333;\n  color: #fff;\n}\n\n\n\n// WEBPACK FOOTER //\n// ./src/components/uuid/UuidStyles.css"],"sourceRoot":""}
