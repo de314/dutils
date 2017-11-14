@@ -6,6 +6,9 @@ const Header = () => (
   <div className="Header">
     <nav className="clearfix white bg-black">
       <div className="sm-col">
+        <NavLink to="/" className="btn py2">
+          <div className="h1 black bg-white p1">/D</div>
+        </NavLink>
         <NavLink to="/uuids" className="btn py2">
           UUID's
         </NavLink>
