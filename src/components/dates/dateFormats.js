@@ -1,7 +1,7 @@
 export default [
   { label: 'Unix Millisecond Timestamp', value: 'x', display: true, example: '1510629545285' },
   { label: 'Unix Timestamp', value: 'X', example: '1510629563' },
-  { label: 'ISO-8601', value: undefined, example: '2014-09-08T08:02:17-05:00' },
+  { label: 'ISO-8601', value: undefined, example: '2014-09-08T08:02:17-05:00', display: true },
   { label: 'Time', value: 'LT', example: '8:30 PM' },
   { label: 'Time With Seconds', value: 'LTS', example: '8:30:25 PM' },
   { label: 'Month numeral, day of month, year', value: 'L', display: true, example: '09/04/1986' },

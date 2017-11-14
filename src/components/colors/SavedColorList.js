@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import { selectSavedColors } from 'rdx/selectors'
 import { removeColor, clearColors } from 'rdx/actions'
 import classnames from 'classnames'
+import { toastr } from 'react-redux-toastr'
 
 import { connect } from 'react-redux'
 
@@ -10,7 +11,7 @@ import { CopyToClipboard } from 'react-copy-to-clipboard'
 
 const SavedColorTile = ({ color, removeColor, setColor }) => (
   <div className="SavedColorTile p1">
-    <CopyToClipboard text={color}>
+    <CopyToClipboard text={color} onCopy={() => toastr.success('Copied')}>
       <div className="border rounded" style={{ backgroundColor: color }}>
         <div className="clearfix">
           <div className="col col-8 flex flex-center p2 clickable" onClick={() => setColor(color)}>

@@ -2,6 +2,7 @@ import React from 'react'
 import _ from 'lodash'
 import jsonLint from 'json-lint'
 import classnames from 'classnames'
+import { toastr } from 'react-redux-toastr'
 
 import { compose, withProps, withState } from 'recompose'
 import { withWrapper } from 'components/hoc'
@@ -11,7 +12,7 @@ import { CopyToClipboard } from 'react-copy-to-clipboard'
 const JsonLintPage = ({ json, lint, setJson, valid }) => (
   <div className="JsonLintPage">
     <div className={classnames('p3', { hide: !valid })}>
-      <CopyToClipboard text={json}>
+      <CopyToClipboard text={json} onCopy={() => toastr.success('Colpied')}>
         <button className="btn btn-primary bg-green fill">
           <i className="fa fa-copy" /> Copy
         </button>

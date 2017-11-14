@@ -1,5 +1,6 @@
 import React from 'react'
 
+import ReduxToastr from 'react-redux-toastr'
 import { Switch, Route } from 'react-router-dom'
 import Header from './layout/Header'
 import Home from './home/Home'
@@ -12,6 +13,7 @@ import AboutPage from './about/AboutPage'
 
 const App = () => (
   <div className="App flex flex-column" style={{ minHeight: '100vh' }}>
+    <ReduxToastr timeOut={1200} />
     <Header />
     <div className="p4 bg-silver flex-auto flex">
       <Switch>

@@ -4,6 +4,7 @@ import generateUuidSet from 'utils/generateUuidSet'
 import classnames from 'classnames'
 import { selectUuids } from 'rdx/selectors'
 import { setUuids, touchUuid } from 'rdx/actions'
+import { toastr } from 'react-redux-toastr'
 
 import { compose, withState, withHandlers } from 'recompose'
 import { connect } from 'react-redux'
@@ -15,7 +16,13 @@ import './UuidStyles.css'
 
 const IdTile = ({ id: { val, touched }, onTouch }) => (
   <div className={classnames('IdTile p1 col col-3', { touched })}>
-    <CopyToClipboard text={val} onCopy={() => onTouch(val)}>
+    <CopyToClipboard
+      text={val}
+      onCopy={() => {
+        onTouch(val)
+        toastr.success('Copied')
+      }}
+    >
       <div className="h3 m1 p1 border">{val}</div>
     </CopyToClipboard>
   </div>

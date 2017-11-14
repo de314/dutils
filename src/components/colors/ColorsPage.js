@@ -2,6 +2,7 @@ import React from 'react'
 import _ from 'lodash'
 import { selectActiveColor } from 'rdx/selectors'
 import { setActiveColor, addColor } from 'rdx/actions'
+import { toastr } from 'react-redux-toastr'
 
 import { connect } from 'react-redux'
 import { compose, withProps, withState } from 'recompose'
@@ -39,7 +40,7 @@ const ColorsPage = ({ addColor, color, setColor, valid }) => (
           onChangeComplete={c => setColor(c.hex)}
         />
         <div className="center mt3">
-          <CopyToClipboard text={color}>
+          <CopyToClipboard text={color} onCopy={() => toastr.success('Copied')}>
             <button className="btn btn-outline blue">
               <i className="fa fa-copy" /> Copy => {color}
             </button>
