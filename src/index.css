@@ -1,0 +1,11 @@
+.mono {
+  font-family: monospace;
+}
+
+.pointable {
+  cursor: pointer;
+}
+
+.shadow {
+  box-shadow: 10px 5px 5px;
+}
