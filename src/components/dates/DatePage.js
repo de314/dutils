@@ -11,24 +11,22 @@ import DateDisplay from './DateDisplay'
 
 const DatePage = ({ date, dateInput, inputFormat, setDateInput, setInputFormat, valid }) => (
   <div className="DatePage">
-    <div className="border p2">
-      <div className="clearfix">
-        <div className="col col-6">
-          <div className="h2">Input</div>
-          <DateInput
-            dateInput={dateInput}
-            setDateInput={setDateInput}
-            inputFormat={inputFormat}
-            setInputFormat={setInputFormat}
-            valid={valid}
-          />
-        </div>
-        <div className="col col-6">
-          <div className="ml3">
-            <div className="h2">Output</div>
-            <div className={classnames({ 'bg-aqua p1': valid })}>
-              <DateDisplay date={date} valid={valid} />
-            </div>
+    <div className="p2 clearfix">
+      <div className="col col-6">
+        <div className="h2">Input</div>
+        <DateInput
+          dateInput={dateInput}
+          setDateInput={setDateInput}
+          inputFormat={inputFormat}
+          setInputFormat={setInputFormat}
+          valid={valid}
+        />
+      </div>
+      <div className="col col-6">
+        <div className="ml3">
+          <div className="h2">Output</div>
+          <div className={classnames({ 'bg-aqua p1': valid })}>
+            <DateDisplay date={date} valid={valid} />
           </div>
         </div>
       </div>
