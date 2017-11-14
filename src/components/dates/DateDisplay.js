@@ -21,7 +21,7 @@ const DateDisplay = ({ date, valid }) => {
     <div className="DateDisplay">
       {dateFormats
         .filter(f => f.display)
-        .map((format, i) => <DateDisplayTile date={date} format={format} />)}
+        .map((format, i) => <DateDisplayTile date={date} format={format} key={i} />)}
     </div>
   )
 }

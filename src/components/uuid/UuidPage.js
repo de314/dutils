@@ -2,10 +2,11 @@ import React from 'react'
 import _ from 'lodash'
 import uuid from 'uuid'
 import classnames from 'classnames'
-import { CopyToClipboard } from 'react-copy-to-clipboard'
 
 import { compose, withState, withHandlers } from 'recompose'
 import { withWrapper } from 'components/hoc'
+
+import { CopyToClipboard } from 'react-copy-to-clipboard'
 
 import './UuidStyles.css'
 
@@ -20,8 +21,8 @@ const IdTile = ({ id: { val, touched }, onTouch }) => (
 const UuidPage = ({ ids, onTouch, refresh }) => (
   <div className="UuidPage">
     <p>
-      Get v4 UUID's for testing/hard coded use cases. This is a, inferior add
-      supported, <a href="https://www.uuidgenerator.net/">alternative</a>.
+      Get v4 UUID's for testing/hard coded use cases. This is a, inferior add supported,{' '}
+      <a href="https://www.uuidgenerator.net/">alternative</a>.
     </p>
     <div className="p3 flex flex-column">
       <button className="btn btn-primary bg-green h3 fit" onClick={refresh}>
@@ -35,8 +36,7 @@ const UuidPage = ({ ids, onTouch, refresh }) => (
   </div>
 )
 
-const genIds = (count = 16) =>
-  _.range(16).map(i => ({ val: uuid(), touched: false }))
+const genIds = (count = 16) => _.range(16).map(i => ({ val: uuid(), touched: false }))
 
 export default compose(
   withWrapper(),

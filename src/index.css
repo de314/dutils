@@ -9,3 +9,8 @@
 .shadow {
   box-shadow: 10px 5px 5px;
 }
+
+.fill {
+  display: block;
+  width: 100%;
+}

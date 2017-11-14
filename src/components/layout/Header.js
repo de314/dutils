@@ -18,6 +18,9 @@ const Header = () => (
         <NavLink to="/colors" className="btn py2">
           Colors
         </NavLink>
+        <NavLink to="/lint/json" className="btn py2">
+          JSON Lint
+        </NavLink>
       </div>
       <div className="sm-col-right">
         <NavLink to="/about" className="btn py2">

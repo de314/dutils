@@ -25,7 +25,7 @@ const DatePage = ({ date, dateInput, inputFormat, setDateInput, setInputFormat, 
       <div className="col col-6">
         <div className="ml3">
           <div className="h2">Output</div>
-          <div className={classnames({ 'bg-aqua p1': valid })}>
+          <div className={classnames('rounded', { 'bg-aqua p1': valid })}>
             <DateDisplay date={date} valid={valid} />
           </div>
         </div>

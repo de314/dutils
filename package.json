@@ -4,9 +4,11 @@
   "private": true,
   "dependencies": {
     "classnames": "^2.2.5",
+    "json-lint": "0.1.0",
     "lodash": "^4.17.4",
     "moment": "^2.19.2",
     "react": "^16.1.1",
+    "react-ace": "5.5.0",
     "react-color": "2.13.8",
     "react-copy-to-clipboard": "^5.0.1",
     "react-dom": "^16.1.1",

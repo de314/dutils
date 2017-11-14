@@ -28,7 +28,7 @@ const HomePage = () => (
         </Link>
       </li>
       <li>
-        <Link to="/json" className="btn btn-outline blue mb2">
+        <Link to="/lint/json" className="btn btn-outline blue mb2">
           Json Linter
         </Link>
       </li>
