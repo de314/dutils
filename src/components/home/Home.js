@@ -22,6 +22,16 @@ const HomePage = () => (
           Colors
         </Link>
       </li>
+      <li>
+        <Link to="/regex" className="btn btn-outline blue mb2">
+          Regex
+        </Link>
+      </li>
+      <li>
+        <Link to="/json" className="btn btn-outline blue mb2">
+          Json Linter
+        </Link>
+      </li>
     </ul>
   </div>
 )
