@@ -1,9 +1,12 @@
 import React from 'react'
 import _ from 'lodash'
-import uuid from 'uuid'
+import generateUuidSet from 'utils/generateUuidSet'
 import classnames from 'classnames'
+import { selectUuids } from 'rdx/selectors'
+import { setUuids, touchUuid } from 'rdx/actions'
 
 import { compose, withState, withHandlers } from 'recompose'
+import { connect } from 'react-redux'
 import { withWrapper } from 'components/hoc'
 
 import { CopyToClipboard } from 'react-copy-to-clipboard'
@@ -36,16 +39,15 @@ const UuidPage = ({ ids, onTouch, refresh }) => (
   </div>
 )
 
-const genIds = (count = 16) => _.range(16).map(i => ({ val: uuid(), touched: false }))
-
 export default compose(
   withWrapper(),
-  withState('ids', 'setIds', genIds()),
-  withHandlers({
-    refresh: ({ setIds }) => () => setIds(genIds()),
-    onTouch: ({ ids, setIds }) => val => {
-      _.find(ids, { val }).touched = true
-      setIds([...ids])
-    },
-  }),
+  connect(
+    state => ({
+      ids: selectUuids(state),
+    }),
+    dispatch => ({
+      refresh: () => dispatch(setUuids(generateUuidSet())),
+      onTouch: id => dispatch(touchUuid(id)),
+    }),
+  ),
 )(UuidPage)
