@@ -5,7 +5,13 @@ import moment from 'moment'
 
 import dateFormats from './dateFormats'
 
-const DateInput = ({ dateInput, setDateInput, inputFormat, setInputFormat, valid }) => {
+const DateInput = ({
+  dateInput,
+  setDateInput,
+  inputFormat,
+  setInputFormat,
+  valid,
+}) => {
   return (
     <div className="DateInput">
       <label className="mb2">Format</label>
@@ -19,7 +25,9 @@ const DateInput = ({ dateInput, setDateInput, inputFormat, setInputFormat, valid
       <div className="flex">
         <input
           type="text"
-          className={classnames('block field flex-auto', { 'is-error': !valid })}
+          className={classnames('block field flex-auto', {
+            'is-error': !valid,
+          })}
           value={dateInput}
           onChange={e => setDateInput(e.target.value)}
         />
@@ -44,7 +52,7 @@ const DateInput = ({ dateInput, setDateInput, inputFormat, setInputFormat, valid
               <div className="h43">{format.label}</div>
               <div className="muted">
                 <div className="mono">{format.value}</div>
-                <div>// {format.example}</div>
+                <div># {format.example}</div>
               </div>
             </div>
           </div>

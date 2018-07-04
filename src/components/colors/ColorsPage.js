@@ -5,7 +5,7 @@ import { setActiveColor, addColor } from 'rdx/actions'
 import { toastr } from 'react-redux-toastr'
 
 import { connect } from 'react-redux'
-import { compose, withProps, withState } from 'recompose'
+import { compose, withProps } from 'recompose'
 import { withWrapper } from 'components/hoc'
 
 import { ChromePicker } from 'react-color'
@@ -29,8 +29,8 @@ const ColorsPage = ({ addColor, color, setColor, valid }) => (
         />
         <div className="py2">
           <em className="muted">
-            Use the text box above to enter text. The chrome color picker text box is semi-janky
-            when inputting hex values.
+            Use the text box above to enter text. The chrome color picker text
+            box is semi-janky when inputting hex values.
           </em>
         </div>
         <ChromePicker
@@ -45,7 +45,10 @@ const ColorsPage = ({ addColor, color, setColor, valid }) => (
               <i className="fa fa-copy" /> Copy => {color}
             </button>
           </CopyToClipboard>
-          <button className="btn btn-outline purple ml2" onClick={() => addColor(color)}>
+          <button
+            className="btn btn-outline purple ml2"
+            onClick={() => addColor(color)}
+          >
             <i className="fa fa-plus" /> Save {color}
           </button>
         </div>

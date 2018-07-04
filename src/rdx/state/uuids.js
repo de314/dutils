@@ -21,6 +21,7 @@ export default (state = defaultState, action) => {
         id.touched = true
         return [...state]
       }
+      break
     }
 
     default:

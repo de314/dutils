@@ -1,12 +1,11 @@
 import React from 'react'
-import _ from 'lodash'
 import generateUuidSet from 'utils/generateUuidSet'
 import classnames from 'classnames'
 import { selectUuids } from 'rdx/selectors'
 import { setUuids, touchUuid } from 'rdx/actions'
 import { toastr } from 'react-redux-toastr'
 
-import { compose, withState, withHandlers } from 'recompose'
+import { compose } from 'recompose'
 import { connect } from 'react-redux'
 import { withWrapper } from 'components/hoc'
 
@@ -31,8 +30,8 @@ const IdTile = ({ id: { val, touched }, onTouch }) => (
 const UuidPage = ({ ids, onTouch, refresh }) => (
   <div className="UuidPage">
     <p>
-      Get v4 UUID's for testing/hard coded use cases. This is a, inferior add supported,{' '}
-      <a href="https://www.uuidgenerator.net/">alternative</a>.
+      Get v4 UUID's for testing/hard coded use cases. This is a, inferior add
+      supported, <a href="https://www.uuidgenerator.net/">alternative</a>.
     </p>
     <div className="p3 flex flex-column">
       <button className="btn btn-primary bg-green h3 fit" onClick={refresh}>
